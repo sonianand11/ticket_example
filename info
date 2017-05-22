@@ -1,0 +1,17 @@
+https://github.com/ThomasMarcel/crossover-tickets/blob/master/README.md
+
+
+* As a user I should be able to
+  * Log in
+  * See tickets I created
+  * See the status of the tickets I created
+  * Create a new ticket
+* as a support agent I should be able to
+  * Log in
+  * See open tickets
+  * Complete open tickets
+  * Get a monthly report of my performance (tickets closed)
+*  as an admin, I should be able to
+  * See all registered users
+  * Edit user's information
+  * Delete users

@@ -1,0 +1,53 @@
+<% if @last_month.any? %>
+  <h1>Report of <%= 1.month.ago.strftime("%B") %> month closed tickets</h1>
+
+  <table border="1" class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created at</th>
+        <th>Updated at</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <% @last_month.each do |t| %>
+        <tr>
+          <td><%= t.title %></td>
+          <td><%= t.description %></td>
+          <td><%= t.status.name %></td>
+          <td><%= t.created_at.strftime("%d/%m/%Y") %></td>
+          <td><%= t.updated_at.strftime("%d/%m/%Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<% if @current_month.any? %>
+  <h1>Report of <%= DateTime.now.strftime("%B") %> month closed tickets</h1>
+
+  <table border="1" class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created at</th>
+        <th>Updated at</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <% @current_month.each do |t| %>
+        <tr>
+          <td><%= t.title %></td>
+          <td><%= t.description %></td>
+          <td><%= t.status.name %></td>
+          <td><%= t.created_at.strftime("%d/%m/%Y") %></td>
+          <td><%= t.updated_at.strftime("%d/%m/%Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
